@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Food Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar animated="true" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" placeholder="Search store"></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let store of results" (click)="gotToStore(store)">
+      {{store.name}}
+      <ion-icon item-end name="arrow-dropright"></ion-icon>
+    </button>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

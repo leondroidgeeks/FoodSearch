@@ -1,0 +1,7 @@
+{
+  "name": "FoodSearch",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

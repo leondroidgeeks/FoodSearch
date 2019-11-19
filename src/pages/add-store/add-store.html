@@ -1,0 +1,57 @@
+<!--
+  Generated template for the AddStorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a store</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="store.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Address</ion-label>
+      <ion-input type="text" (blur)="geocode()" [(ngModel)]="store.address"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="store.category">
+        <ion-option value="Mezger">Mezger</ion-option>
+        <ion-option value="Mexican">Mexican</ion-option>
+        <ion-option value="American">American</ion-option>
+        <ion-option value="Indian">Indian</ion-option>
+        <ion-option value="Asian">Asian</ion-option>
+        <ion-option value="Swabian">Swabian</ion-option>
+        <ion-option value="Supermarkt">Supermarkt</ion-option>
+        <ion-option value="Turkish">Turkish</ion-option>
+        <ion-option value="Italian">Italian</ion-option>
+        <ion-option value="Fast Food">Fast Food</ion-option>
+        <ion-option value="African">African</ion-option>
+        <ion-option value="Thai">Thai</ion-option>
+        <ion-option value="Vietnamese">Vietnamese</ion-option>
+        <ion-option value="Spanish">Spanish</ion-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <button ion-button full (click)="add()">Add</button>
+
+  </ion-list>
+</ion-content>
